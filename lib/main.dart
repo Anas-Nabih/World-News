@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:sizer/sizer.dart';
 import 'package:world_news/comman_utils/constants.dart';
 import 'package:world_news/ui/home_screen.dart';
 
@@ -13,10 +14,12 @@ class WorldNews extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: Const.appName,
-      debugShowCheckedModeBanner: false ,
-      home: HomeScreen(),
+    return Sizer(
+      builder: (context, orientation, deviceType) => const MaterialApp(
+        title: Const.appName,
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen(),
+      ),
     );
   }
 }

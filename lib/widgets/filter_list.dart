@@ -4,7 +4,9 @@ import 'package:sizer/sizer.dart';
 import 'package:world_news/widgets/filter_item.dart';
 
 class FilterList extends StatelessWidget {
-  const FilterList({Key? key}) : super(key: key);
+  const FilterList({required this.categories,Key? key}) : super(key: key);
+
+  final List<String> categories;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class FilterList extends StatelessWidget {
       height: 5.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-          itemCount: 10, itemBuilder: (context, index) => FilterItem()),
+          itemCount: categories.length, itemBuilder: (context, index) => FilterItem(category: categories[index],)),
     );
   }
 }

@@ -5,8 +5,11 @@ import 'package:sizer/sizer.dart';
 
 class FilterItem extends StatelessWidget {
   const FilterItem({
+    required this.category,
     Key? key,
   }) : super(key: key);
+
+  final String category;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +21,7 @@ class FilterItem extends StatelessWidget {
           color: MColors.kPrimaryColor,
           borderRadius: BorderRadius.circular(18)
       ),
-      child: Center(child: Text("Trending",style: TextStyle(
+      child: Center(child: Text(category,style: TextStyle(
         color: Colors.white
       ),)),
     );

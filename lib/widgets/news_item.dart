@@ -42,13 +42,17 @@ class NewsItem extends StatelessWidget {
               color: Colors.red,
               borderRadius: BorderRadius.circular(12),
             ),
-            child:CachedNetworkImage(
-              progressIndicatorBuilder: (context, url, progress) => Center(
-                child: CircularProgressIndicator(
-                  value: progress.progress,
+            child:ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: CachedNetworkImage(
+                progressIndicatorBuilder: (context, url, progress) => Center(
+                  child: CircularProgressIndicator(
+                    value: progress.progress,
+                  ),
                 ),
+                imageUrl:article.imageUrl!,
+                fit: BoxFit.cover,
               ),
-              imageUrl:article.imageUrl!
             ) ,
           ),
           Padding(

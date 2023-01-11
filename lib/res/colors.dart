@@ -1,6 +1,7 @@
  import 'package:flutter/material.dart';
 
 class MColors{
+  static const  Color kPrimaryColor = Color(0xffff6962);
   static const  Color kDarkScaffoldBG = Color(0xff1f1d2b);
   static const  Color kSecondaryColor = Color(0xfffebf47);
   static const  Color kFloatingActionBtnColor = Color(0xff6f6fc8);

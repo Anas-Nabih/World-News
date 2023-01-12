@@ -6,10 +6,14 @@ import 'package:sizer/sizer.dart';
 class FilterItem extends StatelessWidget {
   const FilterItem({
     required this.category,
+    required this.bgColor,
+    required this.textColor,
     Key? key,
   }) : super(key: key);
 
   final String category;
+  final Color bgColor;
+  final Color textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +22,12 @@ class FilterItem extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 2.w),
       margin: EdgeInsets.only(right: 1.5.w),
       decoration: BoxDecoration(
-          color: MColors.kPrimaryColor,
-          borderRadius: BorderRadius.circular(18)
+          color: bgColor,
+          borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: MColors.kPrimaryColor)
       ),
       child: Center(child: Text(category,style: TextStyle(
-        color: Colors.white
+        color: textColor
       ),)),
     );
   }

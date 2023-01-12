@@ -7,7 +7,13 @@ class HomePresenter extends BasePresenter<HomeScreenState> {
   getHomeNews(){
     NewsApi.fetchArticles().then((value) {
       view.articlesList = value!;
+      view.provider.loadingArticles = true;
+    });
+  }
 
+  getHomeNewsByCategory({required String category}){
+    NewsApi.fetchArticlesByCategory(category).then((value) {
+      view.articlesList = value!;
       view.provider.loadingArticles = true;
     });
   }

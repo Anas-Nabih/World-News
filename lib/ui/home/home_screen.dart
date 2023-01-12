@@ -48,7 +48,7 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
                 children: [
                   const HomeScreenAppBar(),
                   const HeadLine(prefixText: "News", suffixText: "See all"),
-                  FilterList(categories: consProvider.categories),
+                  FilterList(homeProvider: provider,presenter: mPresenter),
                   SizedBox(
                     height: 2.h,
                   ),

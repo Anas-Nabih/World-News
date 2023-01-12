@@ -45,12 +45,13 @@ class NewsItem extends StatelessWidget {
             child:ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: CachedNetworkImage(
+                errorWidget: (context, url,error) => FlutterLogo(),
                 progressIndicatorBuilder: (context, url, progress) => Center(
                   child: CircularProgressIndicator(
                     value: progress.progress,
                   ),
                 ),
-                imageUrl:article.imageUrl!,
+                imageUrl:article!.imageUrl ?? "",
                 fit: BoxFit.cover,
               ),
             ) ,

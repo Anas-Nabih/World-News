@@ -13,6 +13,17 @@ class HomeProvider<T> extends BaseListProvider<T>{
     print("Provider statues from provider class: ${loadingArticles}");
   }
 
+  int _currentIndex = 0;
+
+
+  int get currentIndex => _currentIndex;
+
+  set currentIndex(int value) {
+    _currentIndex = value;
+    notifyListeners();
+  }
+
+
   final List<String> categories = [
     "general",
     "technology",

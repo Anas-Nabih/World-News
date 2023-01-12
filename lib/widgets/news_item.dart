@@ -75,8 +75,8 @@ class NewsItem extends StatelessWidget {
                   child: Text(
                     article?.content ?? article?.description ?? "",
                     overflow: TextOverflow.ellipsis,
-                    maxLines: 5,
-                    style: TextStyle(color: Colors.black.withOpacity(.6)),
+                    maxLines: 4,
+                    style: TextStyle(fontSize: 9.sp,color: Colors.black.withOpacity(.6)),
                   ),
                 ),
                 Spacer(),

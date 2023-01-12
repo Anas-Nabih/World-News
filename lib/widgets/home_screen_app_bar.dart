@@ -18,7 +18,7 @@ class HomeScreenAppBar extends StatelessWidget {
             Text("World News",style: TextStyle(
                 fontSize: 13.sp,fontWeight: FontWeight.w500
             ),),
-            const CustomIcon(icon: Icons.notifications,)
+            const CustomIcon(svgPic: "assets/svg/notifications.svg",)
           ],
         ),
         SizedBox(height: 2.h),
@@ -26,7 +26,7 @@ class HomeScreenAppBar extends StatelessWidget {
           children: [
             const Expanded(child: CustomTextField()),
             SizedBox(width: 5.w),
-            const CustomIcon(icon: Icons.filter)
+            const CustomIcon(svgPic: "assets/svg/filter.svg")
           ],
         )
       ],

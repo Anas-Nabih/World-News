@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/base/view/base_state.dart';
 import 'package:world_news/common_utils/constants.dart';
 import 'package:world_news/models/article_model.dart';
+import 'package:world_news/res/colors.dart';
 import 'package:world_news/services/news_api.dart';
 import 'package:world_news/ui/home/home_presenter.dart';
 import 'package:world_news/ui/home/home_provider.dart';
@@ -12,6 +14,7 @@ import 'package:world_news/widgets/filter_list.dart';
 import 'package:world_news/widgets/headline.dart';
 import 'package:world_news/widgets/home_screen_app_bar.dart';
 import 'package:world_news/widgets/news_list.dart';
+import 'package:world_news/widgets/news_shimmer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -54,7 +57,7 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
                   ),
                   provider.loadingArticles ? NewsList(
                     articles: articlesList,
-                  ) : const CircularProgressIndicator()
+                  ) : const NewsShimmer()
                 ],
               ),
             ),

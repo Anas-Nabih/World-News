@@ -3,12 +3,16 @@
 class MColors{
   static const  Color kPrimaryColor = Color(0xffff6962);
   static const  Color kDarkScaffoldBG = Color(0xff1f1d2b);
+  static const  Color kLightScaffoldBG = Color(0xfffafafa);
   static const  Color kSecondaryColor = Color(0xfffebf47);
   static const  Color kFloatingActionBtnColor = Color(0xff6f6fc8);
   static const  Color kTextHolder =  Colors.grey;
   static   Color kDarkContainerBG = Colors.white.withOpacity(0.07);
   static  const Color kDarkBorderColor = Colors.white54;
   static  const Color kDarkHintColor = Colors.white70;
+
+  static   Color shimmerBaseColor = Colors.grey.withOpacity(.3);
+  static   Color shimmerHighlightColor =  Colors.grey.withOpacity(0.1);
 
   static List<Color> kColors = [
     Color(MColors.kDarkContainerBG.value),

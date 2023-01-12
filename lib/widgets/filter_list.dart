@@ -24,6 +24,7 @@ class FilterList extends StatelessWidget {
                 onTap: () {
                   homeProvider.currentIndex = index;
 
+                  homeProvider.loadingArticles = false;
                   presenter.getHomeNewsByCategory(
                       category: homeProvider.categories[index]);
 

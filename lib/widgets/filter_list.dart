@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:world_news/res/colors.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/widgets/filter_item.dart';
 
 class FilterList extends StatelessWidget {
-  const FilterList({required this.categories,Key? key}) : super(key: key);
+  const FilterList({required this.categories, Key? key}) : super(key: key);
 
   final List<String> categories;
 
@@ -13,8 +12,11 @@ class FilterList extends StatelessWidget {
     return SizedBox(
       height: 5.h,
       child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-          itemCount: categories.length, itemBuilder: (context, index) => FilterItem(category: categories[index],)),
+          scrollDirection: Axis.horizontal,
+          itemCount: categories.length,
+          itemBuilder: (context, index) => FilterItem(
+                category: categories[index],
+              )),
     );
   }
 }

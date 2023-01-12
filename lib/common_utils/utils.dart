@@ -24,4 +24,34 @@ class Utils {
     String formattedDate = DateFormat("yyyy-MM-dd").format(dateTime);
     return formattedDate;
   }
+
+
+  /// The background color is translucent black, modify the source code here to be transparent.
+
+  // Future<T> showTransparentDialog<T>({
+  //   required BuildContext context,
+  //   bool barrierDismissible = true,
+  //   required WidgetBuilder builder,
+  // }) {
+  //   final ThemeData theme = Theme.of(context);
+  //   return showGeneralDialog(
+  //     barrierDismissible: true,
+  //     context: context,
+  //     pageBuilder: (BuildContext buildContext, Animation<double> animation,
+  //         Animation<double> secondaryAnimation) {
+  //       final Widget pageChild = Builder(builder: builder);
+  //       return SafeArea(
+  //         child: Builder(builder: (BuildContext context) {
+  //           return theme != null
+  //               ? Theme(data: theme, child: pageChild)
+  //               : pageChild;
+  //         }),
+  //       );
+  //     },
+  //     barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
+  //     barrierColor: const Color(0x00FFFFFF),
+  //     transitionDuration: const Duration(milliseconds: 150),
+  //     transitionBuilder: _buildMaterialDialogTransitions,
+  //   );
+  // }
 }

@@ -1,8 +1,10 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/common_utils/constants.dart';
 import 'package:world_news/models/article_model.dart';
 import 'package:world_news/services/news_api.dart';
+import 'package:world_news/ui/home/home_provider.dart';
 import 'package:world_news/widgets/custom_drawer.dart';
 import 'package:world_news/widgets/filter_list.dart';
 import 'package:world_news/widgets/headline.dart';
@@ -27,23 +29,28 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        drawer: CustomDrawer(),
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
-          child: Column(
-            children: [
-              const HomeScreenAppBar(),
-              const HeadLine(prefixText: "News", suffixText: "See all"),
-              const FilterList(categories: Const.categories),
-              SizedBox(
-                height: 2.h,
+    return ChangeNotifierProvider(
+      create: (context) => HomeProvider(),
+      child: Consumer<HomeProvider>(
+        builder: (context, consProvider, child) => SafeArea(
+          child: Scaffold(
+            drawer: CustomDrawer(),
+            body: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
+              child: Column(
+                children: [
+                  const HomeScreenAppBar(),
+                  const HeadLine(prefixText: "News", suffixText: "See all"),
+                  FilterList(categories: consProvider.categories),
+                  SizedBox(
+                    height: 2.h,
+                  ),
+                  NewsList(
+                    articles: articlesList,
+                  )
+                ],
               ),
-              NewsList(
-                articles: articlesList,
-              )
-            ],
+            ),
           ),
         ),
       ),

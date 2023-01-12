@@ -27,7 +27,7 @@ class NewsApi {
   static Future<List<Article>?> fetchArticlesByCategory(String category) async {
     try {
       http.Response response = await http.get(Uri.parse("https://newsapi.org"
-          "/v2/top-headlines?country=us&category=$category&apiKey=${Const.apiKey}"));
+          "/v2/top-headlines?country=eg&category=$category&apiKey=${Const.apiKey}"));
       if (response.statusCode == 200) {
         String data = response.body;
         var jsonData = jsonDecode(data);

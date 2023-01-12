@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/common_utils/constants.dart';
-import 'package:world_news/ui/home_screen.dart';
+import 'package:world_news/ui/home/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

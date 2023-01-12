@@ -9,7 +9,7 @@ class LightThemeStyle{
 
       /// Colors
       scaffoldBackgroundColor: MColors.kLightScaffoldBG,
-      iconTheme:const IconThemeData(color: Colors.white) ,
+      iconTheme:const IconThemeData(color: MColors.kPrimaryColor) ,
 
       hintColor: MColors.kDarkHintColor,
       /// Text Styles

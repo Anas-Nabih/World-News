@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
+import 'package:world_news/base/view/base_state.dart';
 import 'package:world_news/common_utils/constants.dart';
 import 'package:world_news/models/article_model.dart';
 import 'package:world_news/services/news_api.dart';
+import 'package:world_news/ui/home/home_presenter.dart';
 import 'package:world_news/ui/home/home_provider.dart';
 import 'package:world_news/widgets/custom_drawer.dart';
 import 'package:world_news/widgets/filter_list.dart';
@@ -15,22 +17,27 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeScreen> createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
+    with AutomaticKeepAliveClientMixin, TickerProviderStateMixin {
   List<Article> articlesList = [];
+
+  final provider = HomeProvider();
 
   @override
   void initState() {
-    NewsApi.fetchArticles().then((articles) => articlesList = articles!);
+    mPresenter.getHomeNews();
     super.initState();
   }
 
+
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => HomeProvider(),
+    debugPrint("Provider statues: ${provider.loadingArticles}");
+    return ChangeNotifierProvider<HomeProvider>(
+      create: (context) => provider,
       child: Consumer<HomeProvider>(
         builder: (context, consProvider, child) => SafeArea(
           child: Scaffold(
@@ -45,9 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     height: 2.h,
                   ),
-                  NewsList(
+                  provider.loadingArticles ? NewsList(
                     articles: articlesList,
-                  )
+                  ) : const CircularProgressIndicator()
                 ],
               ),
             ),
@@ -56,4 +63,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+  @override
+  HomePresenter createPresenter() {
+    return HomePresenter();
+  }
+
+  @override
+  bool get wantKeepAlive => true;
 }

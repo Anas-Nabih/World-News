@@ -15,10 +15,14 @@ class HomeScreenAppBar extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("World News",style: TextStyle(
-                fontSize: 13.sp,fontWeight: FontWeight.w500
-            ),),
-            const CustomIcon(svgPic: "assets/svg/notifications.svg",)
+            Text(
+              "World News",
+              style: TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w500),
+            ),
+            CustomIcon(
+              onTapped: () {},
+              svgPic: "assets/svg/notifications.svg",
+            )
           ],
         ),
         SizedBox(height: 2.h),
@@ -26,7 +30,7 @@ class HomeScreenAppBar extends StatelessWidget {
           children: [
             const Expanded(child: CustomTextField()),
             SizedBox(width: 5.w),
-            const CustomIcon(svgPic: "assets/svg/filter.svg")
+            CustomIcon(onTapped: () {}, svgPic: "assets/svg/filter.svg")
           ],
         )
       ],

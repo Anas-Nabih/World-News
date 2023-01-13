@@ -19,6 +19,7 @@ class WorldNews extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, deviceType) =>  MaterialApp(
         title: Const.appName,
+        locale: Locale("ar"),
         theme: LightThemeStyle.lightTheme(context),
         debugShowCheckedModeBanner: false,
         home: HomeScreen(),

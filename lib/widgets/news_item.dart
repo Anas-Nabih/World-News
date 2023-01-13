@@ -1,7 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
+import 'package:world_news/common_utils/image_loader.dart';
+import 'package:world_news/common_utils/utils.dart';
 import 'package:world_news/models/article_model.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/ui/news_details/news_details_screen.dart';
@@ -13,11 +13,6 @@ class NewsItem extends StatelessWidget {
   }) : super(key: key);
 
   final Article article;
-
-  String dateFormatter(String date) {
-    final dateFormate = DateFormat("yyyy-MM-dd").format(DateTime.parse(date));
-    return dateFormate;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,21 +41,12 @@ class NewsItem extends StatelessWidget {
               height: 25.h,
               width: 35.w,
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: MColors.kPrimaryColor,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: CachedNetworkImage(
-                  errorWidget: (context, url, error) => FlutterLogo(),
-                  progressIndicatorBuilder: (context, url, progress) => Center(
-                    child: CircularProgressIndicator(
-                      value: progress.progress,
-                    ),
-                  ),
-                  imageUrl: article!.imageUrl ?? "",
-                  fit: BoxFit.cover,
-                ),
+                child: ImageLoader.loadCachedNetworkImage(article!.imageUrl ?? ""),
               ),
             ),
             Padding(
@@ -84,8 +70,7 @@ class NewsItem extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       maxLines: 4,
                       style: TextStyle(
-                          fontSize: 9.sp, color:
-                      Colors.black.withOpacity(.6)),
+                          fontSize: 9.sp, color: Colors.black.withOpacity(.6)),
                     ),
                   ),
                   Spacer(),
@@ -95,10 +80,9 @@ class NewsItem extends StatelessWidget {
                       SizedBox(
                         width: 18.w,
                         child: Text(
-                          dateFormatter(article.publishedAt!),
+                          Utils.formatApiDate(article.publishedAt!),
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                              color: MColors.kPrimaryColor),
+                          style: const TextStyle(color: MColors.kPrimaryColor),
                         ),
                       ),
                       SizedBox(width: 24.w),

@@ -25,6 +25,13 @@ class Utils {
     return formattedDate;
   }
 
+  static String formatApiDate(String apiDate) {
+    final dateFormat = DateFormat("yyyy-MM-dd").format(DateTime.parse(apiDate));
+    return dateFormat;
+  }
+
+
+
 
   /// The background color is translucent black, modify the source code here to be transparent.
 

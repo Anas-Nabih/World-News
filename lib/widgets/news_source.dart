@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:world_news/common_utils/utils.dart';
 import 'package:world_news/models/article_model.dart';
 import 'package:world_news/res/colors.dart';
 
@@ -17,26 +18,30 @@ class NewsSource extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 1.h),
       child: Row(
         children: [
-          RichText(
-            text: TextSpan(
-                text: "${article.source!.name} - ",
-                style: TextStyle(
-                    color: MColors.kPrimaryColor,
-                    fontSize: 11.sp,
-                    fontWeight: FontWeight.w600),
-                children: [
-                  TextSpan(
-                    text: article.author,
-                    style: TextStyle(
-                        color: MColors.kPrimaryColor,
-                        fontSize: 11.sp,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ]),
+          SizedBox(
+            width: 60.w,
+            child: RichText(
+              text: TextSpan(
+                  text: "${article.source!.name} - ",
+                  style: TextStyle(
+                      color: MColors.kPrimaryColor,
+                      fontSize: 11.sp,
+                      fontWeight: FontWeight.w600),
+                  children: [
+                    TextSpan(
+                      text: article.author,
+                      style: TextStyle(
+                        overflow: TextOverflow.ellipsis,
+                          color: MColors.kPrimaryColor,
+                          fontSize: 11.sp,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ]),
+            ),
           ),
-          Spacer(),
+          const Spacer(),
           Text(
-            "2023-1-12",
+            Utils.formatApiDate(article.publishedAt!),
             style: TextStyle(
               color: Colors.grey.withOpacity(0.8),
               fontSize: 12.sp,

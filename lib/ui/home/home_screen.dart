@@ -44,7 +44,7 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
       child: Consumer<HomeProvider>(
         builder: (context, consProvider, child) => SafeArea(
           child: Scaffold(
-            drawer: CustomDrawer(),
+            drawer: const CustomDrawer(),
             body: Padding(
               padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
               child: Column(
@@ -52,9 +52,7 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
                   const HomeScreenAppBar(),
                   const HeadLine(prefixText: "News", suffixText: "See all"),
                   FilterList(homeProvider: provider,presenter: mPresenter),
-                  SizedBox(
-                    height: 2.h,
-                  ),
+                  SizedBox(height: 2.h,),
                   provider.loadingArticles ? NewsList(
                     articles: articlesList,
                   ) : const NewsShimmer()

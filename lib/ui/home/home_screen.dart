@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/base/view/base_state.dart';
-import 'package:world_news/common_utils/constants.dart';
 import 'package:world_news/models/article_model.dart';
-import 'package:world_news/res/colors.dart';
-import 'package:world_news/services/news_api.dart';
+import 'package:world_news/res/theme/app_provider.dart';
 import 'package:world_news/ui/home/home_presenter.dart';
 import 'package:world_news/ui/home/home_provider.dart';
 import 'package:world_news/widgets/custom_drawer.dart';
@@ -35,10 +32,8 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
-    debugPrint("Provider statues: ${provider.loadingArticles}");
     return ChangeNotifierProvider<HomeProvider>(
       create: (context) => provider,
       child: Consumer<HomeProvider>(
@@ -51,11 +46,15 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
                 children: [
                   const HomeScreenAppBar(),
                   const HeadLine(prefixText: "News", suffixText: "See all"),
-                  FilterList(homeProvider: provider,presenter: mPresenter),
-                  SizedBox(height: 2.h,),
-                  provider.loadingArticles ? NewsList(
-                    articles: articlesList,
-                  ) : const NewsShimmer()
+                  FilterList(homeProvider: provider, presenter: mPresenter),
+                  SizedBox(
+                    height: 2.h,
+                  ),
+                  provider.loadingArticles
+                      ? NewsList(
+                          articles: articlesList,
+                        )
+                      : const NewsShimmer()
                 ],
               ),
             ),

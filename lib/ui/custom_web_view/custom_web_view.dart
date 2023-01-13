@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:world_news/ui/custom_web_view/custom_wev_view_provider.dart';
+import 'package:world_news/widgets/arrow_back.dart';
+import 'package:sizer/sizer.dart';
 
 class CustomWebView extends StatefulWidget {
   const CustomWebView({required this.url,Key? key}) : super(key: key);
@@ -52,11 +55,11 @@ class _CustomWebViewState extends State<CustomWebView> {
       create: (_)=>webViewProvider,
       child: Consumer<CustomWebViewProvider>(builder: (context, value, child) => Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text("title", style: TextStyle(color: Colors.blue)),
-          leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.green),
-              onPressed: () => Navigator.of(context).pop()),
+          title: Text(widget.url, style: TextStyle(fontSize: 10.sp,color: Colors.black)),
+          leading: const ArrowBack(),
+          actions: [
+            SvgPicture.asset("assets/svg/menu.svg")
+          ],
         ),
         body: webViewProvider.pageLoaded ? WebViewWidget(controller: controller) :
         const LinearProgressIndicator(),

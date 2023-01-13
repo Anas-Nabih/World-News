@@ -17,7 +17,7 @@ class HomeScreenAppBar extends StatelessWidget {
           children: [
             Text(
               "World News",
-              style: TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w500),
+              style: Theme.of(context).textTheme.headline1,
             ),
             CustomIcon(
               onTapped: () {},

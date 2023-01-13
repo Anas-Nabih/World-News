@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/common_utils/image_loader.dart';
 import 'package:world_news/common_utils/utils.dart';
 import 'package:world_news/models/article_model.dart';
 import 'package:world_news/res/colors.dart';
+import 'package:world_news/res/theme/app_provider.dart';
 import 'package:world_news/ui/news_details/news_details_screen.dart';
 
 class NewsItem extends StatelessWidget {
@@ -16,6 +18,7 @@ class NewsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appProvider = Provider.of<AppProvider>(context);
     return GestureDetector(
       onTap: () => Navigator.push(
           context,
@@ -26,9 +29,12 @@ class NewsItem extends StatelessWidget {
         height: 25.h,
         margin: EdgeInsets.only(bottom: 2.h, right: 2.w),
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: appProvider.darkTheme
+                ? MColors.kDarkContainerBG
+                : Colors.white,
             borderRadius: BorderRadius.circular(12),
             boxShadow: [
+              if(!appProvider.darkTheme)
               BoxShadow(
                   color: Colors.grey.withOpacity(0.2),
                   offset: const Offset(3, 2),
@@ -46,7 +52,8 @@ class NewsItem extends StatelessWidget {
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: ImageLoader.loadCachedNetworkImage(article!.imageUrl ?? ""),
+                child:
+                    ImageLoader.loadCachedNetworkImage(article!.imageUrl ?? ""),
               ),
             ),
             Padding(
@@ -60,6 +67,7 @@ class NewsItem extends StatelessWidget {
                       article.title!,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ),
                   SizedBox(height: 2.h),
@@ -69,8 +77,7 @@ class NewsItem extends StatelessWidget {
                       article?.content ?? article?.description ?? "",
                       overflow: TextOverflow.ellipsis,
                       maxLines: 4,
-                      style: TextStyle(
-                          fontSize: 9.sp, color: Colors.black.withOpacity(.6)),
+                      style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ),
                   Spacer(),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/res/colors.dart';
+import 'package:world_news/res/theme/app_provider.dart';
 import 'package:world_news/ui/home/home_presenter.dart';
 import 'package:world_news/ui/home/home_provider.dart';
 import 'package:world_news/widgets/filter_item.dart';
@@ -15,6 +17,7 @@ class FilterList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appProvider = Provider.of<AppProvider>(context);
     return SizedBox(
       height: 5.h,
       child: ListView.builder(
@@ -33,7 +36,7 @@ class FilterList extends StatelessWidget {
                 child: FilterItem(
                   bgColor: homeProvider.currentIndex == index
                       ? MColors.kPrimaryColor
-                      : Colors.white,
+                      : appProvider.darkTheme ? MColors.kDarkContainerBG : Colors.white,
                   textColor: homeProvider.currentIndex == index
                       ? Colors.white
                       : MColors.kPrimaryColor,

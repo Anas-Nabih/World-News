@@ -1,7 +1,6 @@
 import 'package:world_news/base/provider/base_list_provider.dart';
 
-class HomeProvider<T> extends BaseListProvider<T>{
-
+class HomeProvider<T> extends BaseListProvider<T> {
   bool _loadingArticles = false;
 
   bool get loadingArticles => _loadingArticles;
@@ -15,14 +14,12 @@ class HomeProvider<T> extends BaseListProvider<T>{
 
   int _currentIndex = 0;
 
-
   int get currentIndex => _currentIndex;
 
   set currentIndex(int value) {
     _currentIndex = value;
     notifyListeners();
   }
-
 
   final List<String> categories = [
     "general",

@@ -10,15 +10,23 @@ class LightThemeStyle{
       /// Colors
       scaffoldBackgroundColor: MColors.kLightScaffoldBG,
       iconTheme:const IconThemeData(color: MColors.kPrimaryColor) ,
+      hintColor: MColors.kLightHintColor,
 
-      hintColor: MColors.kDarkHintColor,
+
+
       /// Text Styles
       textTheme: TextTheme(
-        headline1: TextStyle(color: Colors.white,fontSize: 14.sp, fontWeight: FontWeight.w600),
-        subtitle1: TextStyle(color: Colors.white.withOpacity(0.85),fontWeight: FontWeight.w400,fontSize: 12.sp),
+        headline1: TextStyle(color: Colors.black,fontSize: 13.sp, fontWeight: FontWeight.w600),
+        subtitle1: TextStyle(color: Colors.black.withOpacity(0.85),
+            fontWeight: FontWeight.w400,fontSize: 11.sp),
         subtitle2: TextStyle(color: Colors.white54,fontWeight: FontWeight.w400,fontSize: 9.sp),
         headlineLarge: TextStyle(color: Colors.white,fontSize: 14.sp, fontWeight: FontWeight.w600),
-        bodyText1:  TextStyle(color:MColors.kTextHolder,fontSize: 14.sp,),
+        bodyText1:  TextStyle(
+            fontSize: 10.sp,
+            color: Colors.black.withOpacity(0.9)
+        ),
+        bodyText2: TextStyle(
+            fontSize: 9.sp, color: Colors.black.withOpacity(.6))
       ),
 
       /// Bottom Sheet Theme Data
@@ -29,8 +37,8 @@ class LightThemeStyle{
 
 
       /// List Tile Theme
-      listTileTheme: const ListTileThemeData(
-        iconColor: Colors.white,
+      listTileTheme: ListTileThemeData(
+        iconColor: Colors.grey.withOpacity(0.5),
       ),
     );
   }

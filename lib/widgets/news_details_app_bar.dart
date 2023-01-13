@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/ui/custom_web_view/custom_web_view.dart';
+import 'package:world_news/widgets/arrow_back.dart';
 import 'package:world_news/widgets/custom_icon.dart';
 
 class NewsDetailsAppBar extends StatelessWidget {
@@ -11,9 +12,7 @@ class NewsDetailsAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        GestureDetector(
-            onTap: () => Navigator.pop(context),
-            child: const Icon(Icons.arrow_back)),
+        const ArrowBack(),
         const Spacer(),
         CustomIcon(onTapped: () {}, svgPic: "assets/svg/share.svg"),
         SizedBox(width: 2.w),

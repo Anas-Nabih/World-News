@@ -17,9 +17,7 @@ class HeadLine extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(prefixText,style: TextStyle(
-              fontSize: 11.sp
-          ),),
+          Text(prefixText,style: Theme.of(context).textTheme.subtitle1,),
           Text(suffixText,style: TextStyle(
               fontSize: 10.sp,color: MColors.kPrimaryColor
           ),),

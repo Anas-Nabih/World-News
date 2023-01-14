@@ -15,7 +15,7 @@ class NewsSource extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 1.h),
+      padding: EdgeInsets.symmetric(vertical: 2.h),
       child: Row(
         children: [
           SizedBox(
@@ -23,18 +23,13 @@ class NewsSource extends StatelessWidget {
             child: RichText(
               text: TextSpan(
                   text: "${article.source!.name} - ",
-                  style: TextStyle(
-                      color: MColors.kPrimaryColor,
-                      fontSize: 11.sp,
-                      fontWeight: FontWeight.w600),
+                  style: Theme.of(context).textTheme.headline4,
                   children: [
                     TextSpan(
                       text: article.author,
-                      style: TextStyle(
-                        overflow: TextOverflow.ellipsis,
-                          color: MColors.kPrimaryColor,
-                          fontSize: 11.sp,
-                          fontWeight: FontWeight.w600),
+                      style: Theme.of(context).textTheme.headline4!.copyWith(
+                        overflow: TextOverflow.ellipsis
+                      ),
                     ),
                   ]),
             ),

@@ -34,9 +34,7 @@ class NewsDetails extends StatelessWidget {
               children: [
                 Text(
                   article.title!,
-                  style:
-                      TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600),
-                ),
+                  style:Theme.of(context).textTheme.headline2),
                 NewsSource(article: article),
                 if(article.description != null)
                 ParagraphWithHeadline(

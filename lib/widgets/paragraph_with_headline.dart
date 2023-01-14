@@ -19,10 +19,10 @@ class ParagraphWithHeadline extends StatelessWidget {
         SizedBox(height: 2.h),
         Text(
           headLine,
-          style: TextStyle(fontSize: 11.sp, fontWeight: FontWeight.w600),
+          style: Theme.of(context).textTheme.headline3,
         ),
         SizedBox(height: 1.h),
-        Text(paragraph),
+        Text(paragraph,style: Theme.of(context).textTheme.subtitle2,),
       ],
     );
   }

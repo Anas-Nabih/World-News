@@ -41,7 +41,7 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
           child: Scaffold(
             drawer: const CustomDrawer(),
             body: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
+              padding: EdgeInsets.only(right: 3.w,left: 3.w, top: 1.h),
               child: Column(
                 children: [
                   const HomeScreenAppBar(),

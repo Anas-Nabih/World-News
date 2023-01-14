@@ -7,6 +7,7 @@ import 'package:world_news/common_utils/constants.dart';
 import 'package:world_news/res/theme/dark_theme_style.dart';
 import 'package:world_news/res/theme/light_theme_style.dart';
 import 'package:world_news/ui/home/home_screen.dart';
+import 'package:world_news/ui/main_screen/main_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +38,7 @@ class _WorldNewsState extends State<WorldNews> {
                       ? DarkThemeStyle.darkTheme(context)
                       : LightThemeStyle.lightTheme(context),
                   debugShowCheckedModeBanner: false,
-                  home: HomeScreen(),
+                  home: MainScreen(),
                 )),
               )),
     );

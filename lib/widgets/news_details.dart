@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/common_utils/image_loader.dart';
+import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/models/article_model.dart';
 import 'package:world_news/widgets/news_source.dart';
 import 'package:world_news/widgets/paragraph_with_headline.dart';
@@ -38,10 +39,10 @@ class NewsDetails extends StatelessWidget {
                 NewsSource(article: article),
                 if(article.description != null)
                 ParagraphWithHeadline(
-                    headLine: article?.description !=null ? "Description" : "", paragraph: article.description!),
+                    headLine: article?.description !=null ? S.of(context).Description : "", paragraph: article.description!),
                 if(article.content != null)
                 ParagraphWithHeadline(
-                    headLine: article?.content != null ? "Content" : "",
+                    headLine: article?.content != null ? S.of(context).Content : "",
                     paragraph: article?.content ?? ""),
               ],
             ),

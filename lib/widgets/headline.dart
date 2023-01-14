@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/res/colors.dart';
+import 'package:world_news/ui/categories/categories_screen.dart';
 
 class HeadLine extends StatelessWidget {
   const HeadLine({
@@ -18,9 +19,13 @@ class HeadLine extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(prefixText,style: Theme.of(context).textTheme.subtitle1,),
-          Text(suffixText,style: TextStyle(
-              fontSize: 10.sp,color: MColors.kPrimaryColor
-          ),),
+          GestureDetector(
+            onTap: ()=>Navigator.push(context, MaterialPageRoute(
+                builder: (context) => const CategoriesScreen(),)),
+            child: Text(suffixText,style: TextStyle(
+                fontSize: 10.sp,color: MColors.kPrimaryColor
+            ),),
+          ),
 
         ],
       ),

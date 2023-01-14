@@ -8,6 +8,14 @@
   "darkMode":"Dark Mode",
   "arabic": "العربية",
   "english": "English",
-  "selectLanguage": "Select Language"
-
+  "selectLanguage": "Select Language",
+  "general" :"General"  ,
+  "technology":"Technology"  ,
+  "business":"Business" ,
+  "science": "Science",
+  "sports": "Sports",
+  "health": "Health",
+  "entertainment":"Entertainment",
+  "Description":"Description",
+  "Content":"Content"
 }

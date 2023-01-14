@@ -22,16 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Content": MessageLookupByLibrary.simpleMessage("المحتوى"),
         "Country": MessageLookupByLibrary.simpleMessage("البلد"),
+        "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "business": MessageLookupByLibrary.simpleMessage("تجارة"),
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغير اللغة"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الليلي"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
+        "entertainment": MessageLookupByLibrary.simpleMessage("ترفيه"),
+        "general": MessageLookupByLibrary.simpleMessage("الكل"),
+        "health": MessageLookupByLibrary.simpleMessage("صحة"),
         "lookForWhatYouAreThinking":
             MessageLookupByLibrary.simpleMessage("ابحث عما تفكر فيه."),
         "news": MessageLookupByLibrary.simpleMessage("الأخبار"),
+        "science": MessageLookupByLibrary.simpleMessage("علوم"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "seeAll": MessageLookupByLibrary.simpleMessage("الكل"),
-        "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة")
+        "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة"),
+        "sports": MessageLookupByLibrary.simpleMessage("رياضة"),
+        "technology": MessageLookupByLibrary.simpleMessage("تكنولوجيا")
       };
 }

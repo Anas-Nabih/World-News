@@ -22,18 +22,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Content": MessageLookupByLibrary.simpleMessage("Content"),
         "Country": MessageLookupByLibrary.simpleMessage("Country"),
+        "Description": MessageLookupByLibrary.simpleMessage("Description"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "business": MessageLookupByLibrary.simpleMessage("Business"),
         "changeLanguage":
             MessageLookupByLibrary.simpleMessage("Change Language"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
+        "entertainment": MessageLookupByLibrary.simpleMessage("Entertainment"),
+        "general": MessageLookupByLibrary.simpleMessage("General"),
+        "health": MessageLookupByLibrary.simpleMessage("Health"),
         "lookForWhatYouAreThinking": MessageLookupByLibrary.simpleMessage(
             "Look for what you\'re thinking."),
         "news": MessageLookupByLibrary.simpleMessage("news"),
+        "science": MessageLookupByLibrary.simpleMessage("Science"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "seeAll": MessageLookupByLibrary.simpleMessage("See all"),
         "selectLanguage":
-            MessageLookupByLibrary.simpleMessage("Select Language")
+            MessageLookupByLibrary.simpleMessage("Select Language"),
+        "sports": MessageLookupByLibrary.simpleMessage("Sports"),
+        "technology": MessageLookupByLibrary.simpleMessage("Technology")
       };
 }

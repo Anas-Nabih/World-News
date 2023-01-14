@@ -22,16 +22,16 @@ class FilterList extends StatelessWidget {
       height: 5.h,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: homeProvider.categories.length,
+          itemCount: 5,
           itemBuilder: (context, index) => GestureDetector(
                 onTap: () {
                   homeProvider.currentIndex = index;
 
                   homeProvider.loadingArticles = false;
                   presenter.getHomeNewsByCategory(
-                      category: homeProvider.categories[index]);
+                      category: homeProvider.categoriesList(context: context)[index]);
 
-                  debugPrint(homeProvider.categories[index]);
+                  debugPrint(homeProvider.categoriesList(context: context)[index]);
                 },
                 child: FilterItem(
                   bgColor: homeProvider.currentIndex == index
@@ -40,7 +40,7 @@ class FilterList extends StatelessWidget {
                   textColor: homeProvider.currentIndex == index
                       ? Colors.white
                       : MColors.kPrimaryColor,
-                  category: homeProvider.categories[index],
+                  category: homeProvider.categoriesList(context: context)[index],
                 ),
               )),
     );

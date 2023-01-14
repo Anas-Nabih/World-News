@@ -8,6 +8,15 @@
   "darkMode":"الوضع الليلي",
   "arabic": "العربية",
   "english": "English",
-  "selectLanguage": "اختر اللغة"
+  "selectLanguage": "اختر اللغة",
+  "general" :"الكل"  ,
+  "technology":"تكنولوجيا"  ,
+  "business":"تجارة" ,
+  "science": "علوم",
+  "sports": "رياضة",
+  "health": "صحة",
+  "entertainment":"ترفيه",
+  "Description":"الوصف",
+  "Content":"المحتوى"
 
 }

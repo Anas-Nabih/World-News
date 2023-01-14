@@ -41,7 +41,7 @@ class DarkThemeStyle {
               fontSize: 9.sp),
           headlineLarge: TextStyle(
               color: Colors.white,
-              fontSize: 14.sp,
+              fontSize: 13.sp,
               fontWeight: FontWeight.w600),
           bodyText1:
               TextStyle(fontSize: 10.sp, color: Colors.white.withOpacity(0.85)),

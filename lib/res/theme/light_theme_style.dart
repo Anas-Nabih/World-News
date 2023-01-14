@@ -33,8 +33,8 @@ class LightThemeStyle {
               fontSize: 11.sp),
           subtitle2: TextStyle(fontSize: 9.sp, color: Colors.black54),
           headlineLarge: TextStyle(
-              color: Colors.white,
-              fontSize: 14.sp,
+              color: Colors.black.withOpacity(0.7),
+              fontSize: 13.sp,
               fontWeight: FontWeight.w600),
           bodyText1:
               TextStyle(fontSize: 10.sp, color: Colors.black.withOpacity(0.9)),

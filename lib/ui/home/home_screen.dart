@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/base/view/base_state.dart';
+import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/models/article_model.dart';
 import 'package:world_news/res/theme/app_provider.dart';
 import 'package:world_news/ui/home/home_presenter.dart';
@@ -45,7 +46,7 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
               child: Column(
                 children: [
                   const HomeScreenAppBar(),
-                  const HeadLine(prefixText: "News", suffixText: "See all"),
+                  HeadLine(prefixText: S.of(context).news!, suffixText: "See all"),
                   FilterList(homeProvider: provider, presenter: mPresenter),
                   SizedBox(
                     height: 2.h,

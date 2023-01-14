@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/widgets/custom_icon.dart';
+import 'package:world_news/widgets/langauage_dialog.dart';
 import 'package:world_news/widgets/setting_dark_mode_item.dart';
 import 'package:world_news/widgets/setting_more_item.dart';
 
@@ -16,6 +17,7 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   bool switchVal = false;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -27,7 +29,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
               SettingMoreItem(
                 title: "Change Language",
                 svgPic: "assets/svg/language.svg",
-                onTapped: () {},
+                onTapped: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) => LanguageDialog());
+                },
               ),
               SettingMoreItem(
                 title: "Country",

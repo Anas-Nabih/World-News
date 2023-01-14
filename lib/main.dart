@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
+import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/res/theme/app_provider.dart';
 import 'package:world_news/common_utils/constants.dart';
 import 'package:world_news/res/theme/dark_theme_style.dart';
@@ -33,6 +35,18 @@ class _WorldNewsState extends State<WorldNews> {
               create: (_) => appProvider,
               child: Consumer<AppProvider>(
                 builder: (context, value, child) => (MaterialApp(
+
+                  localizationsDelegates: const [
+                    S.delegate,
+                    GlobalMaterialLocalizations.delegate,
+                    GlobalWidgetsLocalizations.delegate,
+                    GlobalCupertinoLocalizations.delegate,
+                  ],
+                  supportedLocales:const [
+                    Locale('en'),
+                    Locale('ar'),
+                  ],
+                  locale: Locale("ar"),
                   title: Const.appName,
                   theme: appProvider.darkTheme
                       ? DarkThemeStyle.darkTheme(context)

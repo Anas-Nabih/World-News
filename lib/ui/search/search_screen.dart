@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/base/view/base_state.dart';
+import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/ui/search/search_presenter.dart';
 import 'package:world_news/ui/search/search_provider.dart';
@@ -37,7 +38,7 @@ class SearchScreenState extends BaseState<SearchScreen, SearchPresenter>
                     height: 40.h,
                   ),
                   Center(
-                    child: Text("Look for what you're thinking.",style: TextStyle(
+                    child: Text(S.of(context).lookForWhatYouAreThinking,style: TextStyle(
                       fontSize: 14.sp,color: MColors.kPrimaryColor
                     ),),
                   )

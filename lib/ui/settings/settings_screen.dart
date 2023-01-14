@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sizer/sizer.dart';
+import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/widgets/custom_icon.dart';
 import 'package:world_news/widgets/langauage_dialog.dart';
@@ -27,7 +28,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           child: Column(
             children: [
               SettingMoreItem(
-                title: "Change Language",
+                title: S.of(context).changeLanguage,
                 svgPic: "assets/svg/language.svg",
                 onTapped: () {
                   showDialog(
@@ -36,7 +37,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 },
               ),
               SettingMoreItem(
-                title: "Country",
+                title: S.of(context).Country,
                 svgPic: "assets/svg/country.svg",
                 onTapped: () {},
               ),

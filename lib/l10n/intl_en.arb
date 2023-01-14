@@ -1,3 +1,13 @@
 {
-  "news": "news"
+  "news": "news",
+  "seeAll": "See all",
+  "search": "Search",
+  "lookForWhatYouAreThinking": "Look for what you're thinking.",
+  "Country": "Country",
+  "changeLanguage": "Change Language",
+  "darkMode":"Dark Mode",
+  "arabic": "العربية",
+  "english": "English",
+  "selectLanguage": "Select Language"
+
 }

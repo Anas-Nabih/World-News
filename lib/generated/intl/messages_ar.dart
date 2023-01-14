@@ -22,6 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "news": MessageLookupByLibrary.simpleMessage("الأخبار")
+        "Country": MessageLookupByLibrary.simpleMessage("البلد"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "changeLanguage": MessageLookupByLibrary.simpleMessage("تغير اللغة"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الليلي"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
+        "lookForWhatYouAreThinking":
+            MessageLookupByLibrary.simpleMessage("ابحث عما تفكر فيه."),
+        "news": MessageLookupByLibrary.simpleMessage("الأخبار"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("الكل"),
+        "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة")
       };
 }

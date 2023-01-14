@@ -1,3 +1,13 @@
 {
-  "news": "الأخبار"
+   "news": "الأخبار",
+  "seeAll": "الكل",
+  "search": "بحث",
+  "lookForWhatYouAreThinking": "ابحث عما تفكر فيه.",
+  "Country": "البلد",
+  "changeLanguage": "تغير اللغة",
+  "darkMode":"الوضع الليلي",
+  "arabic": "العربية",
+  "english": "English",
+  "selectLanguage": "اختر اللغة"
+
 }

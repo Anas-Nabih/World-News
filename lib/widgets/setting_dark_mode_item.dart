@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:world_news/common_utils/preferences/Prefs.dart';
+import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/res/theme/app_provider.dart';
 import 'package:sizer/sizer.dart';
@@ -30,7 +32,7 @@ class SettingDarkModeItem extends StatelessWidget {
             ),
             SizedBox(width: 3.w),
             Text(
-              "Dark Mode",
+              S.of(context).darkMode,
               style: TextStyle(fontSize: 13.sp),
             ),
             const Spacer(),
@@ -38,6 +40,7 @@ class SettingDarkModeItem extends StatelessWidget {
                 activeColor: MColors.kPrimaryColor,
                 value: appProvider.darkTheme,
                 onChanged: (val) {
+                  Prefs.setIsDarkMode(val);
                   appProvider.darkTheme = val;
                 })
           ],

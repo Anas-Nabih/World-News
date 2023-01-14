@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/common_utils/utils.dart';
+import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/res/theme/app_provider.dart';
 import 'package:world_news/ui/search/search_screen.dart';
@@ -33,7 +34,7 @@ class _SearchContainerState extends State<SearchContainer> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Search",style: TextStyle(fontSize: 11.sp,color:appProvider.darkTheme ?
+            Text(S.of(context).search,style: TextStyle(fontSize: 11.sp,color:appProvider.darkTheme ?
             Colors.white.withOpacity(0.7): Colors.grey.withOpacity(0.7)),),
             Icon(
                 Icons.search,color:  appProvider.darkTheme

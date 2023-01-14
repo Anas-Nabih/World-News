@@ -15,17 +15,11 @@ class SearchScreeAppBar extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 1.h),
-          child: Row(
-            children: [
-              const ArrowBack(),
-              SizedBox(width: 30.w,),
-              Text("Search",style:TextStyle(
-                  color: MColors.kPrimaryColor,
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w500))
-            ],
-          ),
+          padding: EdgeInsets.only(top: 2.h,bottom: 1.h),
+          child: Text("Search",style:TextStyle(
+             color: MColors.kPrimaryColor,
+             fontSize: 12.sp,
+             fontWeight: FontWeight.w500)),
         ),
         SizedBox(height: 2.h),
         Row(

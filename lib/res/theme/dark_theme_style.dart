@@ -10,8 +10,8 @@ class DarkThemeStyle {
       /// Colors
       scaffoldBackgroundColor: MColors.kDarkScaffoldBG,
       iconTheme: const IconThemeData(color: MColors.kPrimaryColor),
-
       hintColor: MColors.kDarkHintColor,
+      dividerColor: Colors.white.withOpacity(0.3),
 
       /// Text Styles
       textTheme: TextTheme(

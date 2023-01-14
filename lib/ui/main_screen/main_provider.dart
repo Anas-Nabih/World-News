@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:world_news/base/provider/base_provider.dart';
 import 'package:world_news/ui/home/home_screen.dart';
+ import 'package:world_news/ui/search/search_screen.dart';
+import 'package:world_news/ui/settings/settings_screen.dart';
 
 class MainProvider<T> extends BaseProvider<T> {
   late final TabController tabController;
@@ -16,14 +18,10 @@ class MainProvider<T> extends BaseProvider<T> {
 
   List<Widget> pages = [
     HomeScreen(),
-    Container(
-      color: Colors.red,
-    ),
+    SearchScreen(),
     Container(
       color: Colors.green,
     ),
-    Container(
-      color: Colors.blue,
-    ),
+    SettingsScreen(),
   ];
 }

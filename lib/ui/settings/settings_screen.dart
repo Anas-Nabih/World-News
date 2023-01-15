@@ -1,3 +1,4 @@
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,6 +7,7 @@ import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/widgets/custom_icon.dart';
 import 'package:world_news/widgets/langauage_dialog.dart';
+import 'package:world_news/widgets/setting_country_item.dart';
 import 'package:world_news/widgets/setting_dark_mode_item.dart';
 import 'package:world_news/widgets/setting_more_item.dart';
 
@@ -18,6 +20,8 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   bool switchVal = false;
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +45,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 svgPic: "assets/svg/country.svg",
                 onTapped: () {},
               ),
-              const SettingDarkModeItem()
-            ],
+              const SettingDarkModeItem(),
+              // SettingCountryItem()
+             ],
           ),
         ),
       ),

@@ -1,6 +1,6 @@
-# world_news
+# World News
 
-A new Flutter project.
+The project is an application that displays news articles and events that occur all over the world immediately. The user can share news articles and video clips. The application will enable the user to view news, photo and video details, and users can also bookmark any news article/video for future use.
 
 ## Getting Started
 

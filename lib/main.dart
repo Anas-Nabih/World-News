@@ -11,6 +11,7 @@ import 'package:world_news/res/theme/dark_theme_style.dart';
 import 'package:world_news/res/theme/light_theme_style.dart';
 import 'package:world_news/ui/home/home_screen.dart';
 import 'package:world_news/ui/main_screen/main_screen.dart';
+import 'package:world_news/ui/onboarding/onboarding_screen.dart';
 import 'package:world_news/ui/splash/splash_screen.dart';
 
 void main() {
@@ -62,7 +63,7 @@ class _WorldNewsState extends State<WorldNews> {
                       ? DarkThemeStyle.darkTheme(context)
                       : LightThemeStyle.lightTheme(context),
                   debugShowCheckedModeBanner: false,
-                  home: SplashScreen(),
+                  home: OnBoardingScreen(),
                 )),
               )),
     );

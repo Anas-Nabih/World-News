@@ -28,4 +28,8 @@ class ImageLoader {
       ),
     );
   }
+
+  static loadImage(String img){
+    return Image.asset(img,fit: BoxFit.cover,height: double.infinity,);
+  }
 }

@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sizer/sizer.dart';
 import 'package:world_news/base/view/base_state.dart';
-import 'package:world_news/res/colors.dart';
 import 'package:world_news/ui/main_screen/main_presenter.dart';
 import 'package:world_news/ui/main_screen/main_provider.dart';
 import 'package:world_news/widgets/bottom_navigation_bar.dart';
-import 'package:world_news/widgets/tab_bar_icon.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -41,7 +38,8 @@ class MainScreenState extends BaseState<MainScreen, MainPresenter>
               controller: mainProvider.tabController,
               children: mainProvider.pages,
             ),
-            bottomNavigationBar: CustomBottomNavigationBar(mainProvider: mainProvider),
+            bottomNavigationBar:
+                CustomBottomNavigationBar(mainProvider: mainProvider),
           ),
         ),
       ),

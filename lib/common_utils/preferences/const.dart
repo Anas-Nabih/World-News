@@ -1,5 +1,4 @@
-class Const{
-
+class Const {
   static const String appName = "World News";
   static const String apiKey = "1d4bccd55c6e4b30b7dc390dc3da42c1";
 
@@ -15,7 +14,11 @@ class Const{
 
   static const String USER_TOKEN = "USER_TOKEN";
 
-  static const String COUNTRY_CODE= "COUNTRY_CODE";
+  static const String COUNTRY_CODE = "COUNTRY_CODE";
+
+  static const String COUNTRY_SELECTED = "COUNTRY_SELECTED";
+
+  static const String ONBOARDING_SKIPPED = "ONBOARDING_SKIPPED";
 
   static const String USER_ID = "USER_ID";
 
@@ -32,5 +35,4 @@ class Const{
   static const String SOURCE_HOME = "HOME";
 
   static const String IS_DARK_MODE = "IS_DARK_MODE";
-
 }

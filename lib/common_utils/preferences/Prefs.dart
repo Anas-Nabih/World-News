@@ -9,6 +9,18 @@ class Prefs {
   static Future setIsLogin(bool value) =>
       PreferencesHelper.setBool(Const.IS_LOGIN_KEY, value);
 
+  static Future<bool> get isCountrySelected =>
+      PreferencesHelper.getBool(Const.COUNTRY_SELECTED);
+
+  static Future setIsCountrySelected(bool value) =>
+      PreferencesHelper.setBool(Const.IS_LOGIN_KEY, value);
+
+  static Future<bool> get isOnBoardingSkipped =>
+      PreferencesHelper.getBool(Const.ONBOARDING_SKIPPED);
+
+  static Future setIsOnBoardingSkipped(bool value) =>
+      PreferencesHelper.setBool(Const.ONBOARDING_SKIPPED, value);
+
   static Future<bool> get isDarkMode =>
       PreferencesHelper.getBool(Const.IS_DARK_MODE);
 

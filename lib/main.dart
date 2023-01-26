@@ -63,7 +63,7 @@ class _WorldNewsState extends State<WorldNews> {
                       ? DarkThemeStyle.darkTheme(context)
                       : LightThemeStyle.lightTheme(context),
                   debugShowCheckedModeBanner: false,
-                  home: MainScreen(),
+                  home: SplashScreen(),
                 )),
               )),
     );

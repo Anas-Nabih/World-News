@@ -37,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "lookForWhatYouAreThinking": MessageLookupByLibrary.simpleMessage(
             "Look for what you\'re thinking."),
         "news": MessageLookupByLibrary.simpleMessage("news"),
+        "noDataFoundAboutThisSearch": MessageLookupByLibrary.simpleMessage(
+            "No Data Found about this search"),
         "science": MessageLookupByLibrary.simpleMessage("Science"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "seeAll": MessageLookupByLibrary.simpleMessage("See all"),

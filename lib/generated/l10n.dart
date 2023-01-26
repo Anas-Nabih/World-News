@@ -239,6 +239,16 @@ class S {
       args: [],
     );
   }
+
+  /// `No Data Found about this search`
+  String get noDataFoundAboutThisSearch {
+    return Intl.message(
+      'No Data Found about this search',
+      name: 'noDataFoundAboutThisSearch',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

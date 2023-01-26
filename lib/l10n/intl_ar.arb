@@ -17,6 +17,6 @@
   "health": "صحة",
   "entertainment":"ترفيه",
   "Description":"الوصف",
-  "Content":"المحتوى"
-
+  "Content":"المحتوى",
+  "noDataFoundAboutThisSearch": "لا توجد بيانات حول هذا البحث"
 }

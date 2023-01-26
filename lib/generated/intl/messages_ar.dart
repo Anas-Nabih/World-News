@@ -36,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "lookForWhatYouAreThinking":
             MessageLookupByLibrary.simpleMessage("ابحث عما تفكر فيه."),
         "news": MessageLookupByLibrary.simpleMessage("الأخبار"),
+        "noDataFoundAboutThisSearch": MessageLookupByLibrary.simpleMessage(
+            "لا توجد بيانات حول هذا البحث"),
         "science": MessageLookupByLibrary.simpleMessage("علوم"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "seeAll": MessageLookupByLibrary.simpleMessage("الكل"),

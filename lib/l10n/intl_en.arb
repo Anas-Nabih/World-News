@@ -17,5 +17,6 @@
   "health": "Health",
   "entertainment":"Entertainment",
   "Description":"Description",
-  "Content":"Content"
+  "Content":"Content",
+  "noDataFoundAboutThisSearch": "No Data Found about this search"
 }

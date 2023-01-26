@@ -29,7 +29,7 @@ class HomeScreenAppBar extends StatelessWidget {
         SizedBox(height: 2.h),
         Row(
           children: [
-            const Expanded(child: CustomTextField()),
+              Expanded(child: CustomTextField()),
             SizedBox(width: 5.w),
             CustomIcon(onTapped: () {}, svgPic: "assets/svg/filter.svg")
           ],

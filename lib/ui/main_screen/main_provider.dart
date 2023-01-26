@@ -17,11 +17,11 @@ class MainProvider<T> extends BaseProvider<T> {
   }
 
   List<Widget> pages = [
-    HomeScreen(),
-    SearchScreen(),
+    const HomeScreen(),
+   const  SearchScreen(isFromHome: false),
     Container(
       color: Colors.green,
     ),
-    SettingsScreen(),
+    const SettingsScreen(),
   ];
 }

@@ -21,7 +21,7 @@ class _SearchContainerState extends State<SearchContainer> {
   Widget build(BuildContext context) {
     final appProvider = Provider.of<AppProvider>(context);
     return GestureDetector(
-      onTap: ()=>Utils.push(context: context, navigationScreen: const SearchScreen()),
+      onTap: ()=>Utils.push(context: context, navigationScreen: const SearchScreen(isFromHome: true,)),
       child: Container(
         height: 6.h,
         padding: EdgeInsets.symmetric(horizontal: 2.w),

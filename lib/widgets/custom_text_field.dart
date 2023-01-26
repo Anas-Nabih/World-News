@@ -7,12 +7,14 @@ import 'package:world_news/res/theme/app_provider.dart';
 import 'package:world_news/widgets/search_container.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({
+   CustomTextField({
     this.isFromHome = true,
+    this.onSubmitted,
     Key? key,
    }) : super(key: key);
 
  final bool isFromHome;
+  void Function(String)? onSubmitted;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +22,7 @@ class CustomTextField extends StatelessWidget {
     return isFromHome ? const SearchContainer() : SizedBox(
       height: 6.h,
       child: TextField(
+        onSubmitted: onSubmitted,
         decoration: InputDecoration(
             suffixIcon: Icon(
               Icons.search,

@@ -30,8 +30,12 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
 
   @override
   void initState() {
-    Prefs.getCountryCode.then((value) => provider.countryCode = value);
-    mPresenter.getHomeNews();
+    Prefs.getCountryCode.then((value) => {
+          debugPrint("countryCode status: $value"),
+          provider.countryCode = value,
+    mPresenter.getHomeNews(countryCode: value)
+        });
+
     super.initState();
   }
 
@@ -44,11 +48,12 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
           child: Scaffold(
             drawer: const CustomDrawer(),
             body: Padding(
-              padding: EdgeInsets.only(right: 3.w,left: 3.w, top: 1.h),
+              padding: EdgeInsets.only(right: 3.w, left: 3.w, top: 1.h),
               child: Column(
                 children: [
                   const HomeScreenAppBar(),
-                  HeadLine(prefixText: S.of(context).news!,
+                  HeadLine(
+                      prefixText: S.of(context).news!,
                       suffixText: S.of(context).seeAll),
                   FilterList(homeProvider: provider, presenter: mPresenter),
                   SizedBox(

@@ -29,18 +29,20 @@ class FilterList extends StatelessWidget {
 
                   homeProvider.loadingArticles = false;
                   presenter.getHomeNewsByCategory(
-                      category: homeProvider.categoriesList(context: context)[index]);
-
-                  debugPrint(homeProvider.categoriesList(context: context)[index]);
+                      category:
+                          homeProvider.categoriesList(context: context)[index]);
                 },
                 child: FilterItem(
                   bgColor: homeProvider.currentIndex == index
                       ? MColors.kPrimaryColor
-                      : appProvider.darkTheme ? MColors.kDarkContainerBG : Colors.white,
+                      : appProvider.darkTheme
+                          ? MColors.kDarkContainerBG
+                          : Colors.white,
                   textColor: homeProvider.currentIndex == index
                       ? Colors.white
                       : MColors.kPrimaryColor,
-                  category: homeProvider.categoriesList(context: context)[index],
+                  category:
+                      homeProvider.categoriesList(context: context)[index],
                 ),
               )),
     );

@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:world_news/common_utils/preferences/Prefs.dart';
 import 'package:world_news/common_utils/preferences/const.dart';
 import 'package:world_news/models/article_model.dart';
 import 'package:world_news/models/articles_model.dart';
@@ -9,6 +8,7 @@ import 'package:world_news/models/articles_model.dart';
 class NewsApi {
   static Future<List<Article>?> fetchArticles({required String countryCode}) async {
     try {
+      debugPrint("country code from api:$countryCode");
       http.Response response = await http.get(Uri.parse("https://newsapi.org"
           "/v2/top-headlines?country=$countryCode&apiKey=${Const.apiKey}"));
       if (response.statusCode == 200) {
@@ -45,9 +45,9 @@ class NewsApi {
 
   static Future<List<Article>?> fetchArticlesByCategory(
       {required String category,required String countryCode}) async {
-    try {
+     try {
       http.Response response = await http.get(Uri.parse("https://newsapi.org"
-          "/v2/top-headlines?country=eg&category=$category&apiKey=${Const.apiKey}"));
+          "/v2/top-headlines?country=$countryCode&category=$category&apiKey=${Const.apiKey}"));
       if (response.statusCode == 200) {
         String data = response.body;
         var jsonData = jsonDecode(data);

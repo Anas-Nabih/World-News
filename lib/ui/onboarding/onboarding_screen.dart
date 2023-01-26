@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:world_news/common_utils/image_loader.dart';
 import 'package:sizer/sizer.dart';
+import 'package:world_news/common_utils/preferences/Prefs.dart';
 import 'package:world_news/common_utils/utils.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/ui/onboarding/onboarding_provider.dart';
@@ -71,6 +72,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     if (provider.currentPageIndex < 2) {
       provider.currentPageIndex++;
     } else {
+      Prefs.setIsOnBoardingSkipped(true);
       Utils.push(context: context, navigationScreen: const CountriesScreen(),replace: true);
     }
   }

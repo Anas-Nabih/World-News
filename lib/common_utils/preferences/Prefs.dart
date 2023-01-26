@@ -13,7 +13,7 @@ class Prefs {
       PreferencesHelper.getBool(Const.COUNTRY_SELECTED);
 
   static Future setIsCountrySelected(bool value) =>
-      PreferencesHelper.setBool(Const.IS_LOGIN_KEY, value);
+      PreferencesHelper.setBool(Const.COUNTRY_SELECTED, value);
 
   static Future<bool> get isOnBoardingSkipped =>
       PreferencesHelper.getBool(Const.ONBOARDING_SKIPPED);

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/base/view/base_state.dart';
+import 'package:world_news/common_utils/preferences/Prefs.dart';
 import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/models/article_model.dart';
 import 'package:world_news/res/theme/app_provider.dart';
@@ -29,6 +30,7 @@ class HomeScreenState extends BaseState<HomeScreen, HomePresenter>
 
   @override
   void initState() {
+    Prefs.getCountryCode.then((value) => provider.countryCode = value);
     mPresenter.getHomeNews();
     super.initState();
   }

@@ -15,6 +15,8 @@ class Const{
 
   static const String USER_TOKEN = "USER_TOKEN";
 
+  static const String COUNTRY_CODE= "COUNTRY_CODE";
+
   static const String USER_ID = "USER_ID";
 
   static const String APP_LOCAL = "APP_LOCAL";

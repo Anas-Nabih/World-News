@@ -27,6 +27,12 @@ class Prefs {
   static Future<String> get getUserToken =>
       PreferencesHelper.getString(Const.USER_TOKEN);
 
+  static Future setCountryCode(String value) =>
+      PreferencesHelper.setString(Const.COUNTRY_CODE, value);
+
+  static Future<String> get getCountryCode =>
+      PreferencesHelper.getString(Const.COUNTRY_CODE);
+
   static Future setUserId(String value) =>
       PreferencesHelper.setString(Const.USER_ID, value);
 

@@ -5,7 +5,7 @@ import 'package:sizer/sizer.dart';
 import 'package:world_news/common_utils/utils.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/ui/onboarding/onboarding_provider.dart';
-import 'package:world_news/ui/select_country/select_country_screen.dart';
+import 'package:world_news/ui/select_country/countries_screen.dart';
 import 'package:world_news/widgets/custom_button.dart';
 import 'package:world_news/widgets/custom_slider_indicator.dart';
 import 'package:world_news/widgets/onboarding_text.dart';
@@ -71,7 +71,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     if (provider.currentPageIndex < 2) {
       provider.currentPageIndex++;
     } else {
-      Utils.push(context: context, navigationScreen: const SelectCountryScreen(),replace: true);
+      Utils.push(context: context, navigationScreen: const CountriesScreen(),replace: true);
     }
   }
 }

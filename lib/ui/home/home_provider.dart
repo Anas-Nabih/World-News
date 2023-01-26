@@ -11,8 +11,7 @@ class HomeProvider<T> extends BaseListProvider<T> {
     _loadingArticles = value;
 
     notifyListeners();
-    print("Provider statues from provider class: ${loadingArticles}");
-  }
+   }
 
   String _countryCode = "EG";
 

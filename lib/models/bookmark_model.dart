@@ -1,6 +1,6 @@
 class BookMarkModel {
-  Source? newsId;
   Source? source;
+  String? newsId;
   String? author;
   String? title;
   String? description;

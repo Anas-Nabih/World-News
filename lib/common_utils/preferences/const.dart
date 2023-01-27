@@ -1,6 +1,9 @@
 class Const {
   static const String appName = "World News";
   static const String apiKey = "1d4bccd55c6e4b30b7dc390dc3da42c1";
+
+  static const String bookmarks = "bookmarks";
+
   static const String firebaseUrl = "world-news-eb2d5-default-rtdb.firebaseio.com/";
 
   static const String CURRENT_USER_KEY = 'CURRENT_USER_KEY';

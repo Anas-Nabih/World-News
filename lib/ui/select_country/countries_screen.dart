@@ -6,7 +6,9 @@ import 'package:world_news/widgets/countries_screen_app_bar.dart';
 import 'package:world_news/widgets/country_item.dart';
 
 class CountriesScreen extends StatefulWidget {
-  const CountriesScreen({Key? key}) : super(key: key);
+  const CountriesScreen({Key? key,this.isFromSettings = false}) : super(key: key);
+
+  final bool isFromSettings;
 
   @override
   State<CountriesScreen> createState() => _CountriesScreenState();
@@ -26,7 +28,8 @@ class _CountriesScreenState extends State<CountriesScreen> {
                     top: 2.h, bottom: 1.h, right: 3.w, left: 3.w),
                 child: Column(
                   children: [
-                    CountriesScreenAppBar(countriesProvider: countriesProvider),
+                    CountriesScreenAppBar(countriesProvider: countriesProvider,
+                    isFromSettings: widget.isFromSettings),
                     SizedBox(height: 2.h),
                     Expanded(
                       child: ListView.builder(

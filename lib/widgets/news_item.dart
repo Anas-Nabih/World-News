@@ -76,7 +76,7 @@ class _NewsItemState extends State<NewsItem> {
                   height: 25.h,
                   width: 35.w,
                   decoration: BoxDecoration(
-                    color: MColors.kPrimaryColor,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: ClipRRect(

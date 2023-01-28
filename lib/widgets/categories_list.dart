@@ -15,7 +15,6 @@ class CategoriesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Expanded(
       child: GridView.builder(
           padding: EdgeInsets.only(
@@ -31,12 +30,11 @@ class CategoriesList extends StatelessWidget {
                 onTap: () => Utils.push(
                     context: context,
                     navigationScreen: CategoryScreen(
-                        title: appProvider.categoriesList(
-                            context: context)[index])),
+                      category: "${appProvider.categoriesList(context: context)[index]["key"]}",
+                        title: "${appProvider.categoriesList(context: context)[index]["title"]}")),
                 child: CategoryItem(
-                    img:
-                        "https://firebasestorage.googleapis.com/v0/b/e-commerce-a7827.appspot.com/o/pc.jpg?alt=media&token=ae3199b4-4650-4e7c-9607-b9ac0f4cab94",
-                    title: appProvider.categoriesList(context: context)[index]),
+                    img:"${appProvider.categoriesList(context: context)[index]["img"]}",
+                    title: "${appProvider.categoriesList(context: context)[index]["title"]}"),
               )),
     );
   }

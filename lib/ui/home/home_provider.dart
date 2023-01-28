@@ -11,7 +11,7 @@ class HomeProvider<T> extends BaseListProvider<T> {
     _loadingArticles = value;
 
     notifyListeners();
-   }
+  }
 
   String _countryCode = "EG";
 
@@ -31,15 +31,15 @@ class HomeProvider<T> extends BaseListProvider<T> {
     notifyListeners();
   }
 
-  List<String> categoriesList({required BuildContext context}){
-    return  [
-      S.of(context).general,
-      S.of(context).technology,
-      S.of(context).business,
-      S.of(context).science,
-      S.of(context).sports,
-      S.of(context).health,
-      S.of(context).entertainment,
+  List<Map<String, String>> categoriesList({required BuildContext context}) {
+    return [
+      {"key": "General", "value": S.of(context).general},
+      {"key": "Technology", "value": S.of(context).technology},
+      {"key": "Business", "value": S.of(context).business},
+      {"key": "Science", "value": S.of(context).science},
+      {"key": "Sports", "value": S.of(context).sports},
+      {"key": "Health", "value": S.of(context).health},
+      {"key": "Entertainment", "value": S.of(context).entertainment},
     ];
   }
 }

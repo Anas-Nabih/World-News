@@ -30,7 +30,7 @@ class FilterList extends StatelessWidget {
                   homeProvider.loadingArticles = false;
                   presenter.getHomeNewsByCategory(
                       category:
-                          homeProvider.categoriesList(context: context)[index]);
+                      "${homeProvider.categoriesList(context: context)[index]["key"]}");
                 },
                 child: FilterItem(
                   bgColor: homeProvider.currentIndex == index
@@ -42,7 +42,7 @@ class FilterList extends StatelessWidget {
                       ? Colors.white
                       : MColors.kPrimaryColor,
                   category:
-                      homeProvider.categoriesList(context: context)[index],
+                  "${homeProvider.categoriesList(context: context)[index]["value"]}",
                 ),
               )),
     );

@@ -11,8 +11,9 @@ import 'package:world_news/widgets/news_shimmer.dart';
 import 'package:world_news/widgets/screen_app_bar.dart';
 
 class CategoryScreen extends StatefulWidget {
-  const CategoryScreen({Key? key, required this.title}) : super(key: key);
+  const CategoryScreen({Key? key, required this.title,required this.category}) : super(key: key);
   final String title;
+  final String category;
 
   @override
   State<CategoryScreen> createState() => CategoryScreenState();
@@ -28,7 +29,7 @@ class CategoryScreenState extends BaseState<CategoryScreen, CategoryPresenter>
     Prefs.getCountryCode.then((value) => {
           debugPrint("countryCode status: $value"),
           categoryProvider.countryCode = value,
-          mPresenter.getNewsByCategory(category: widget.title)
+          mPresenter.getNewsByCategory(category: widget.category)
         });
     super.initState();
   }

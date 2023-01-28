@@ -27,7 +27,7 @@ class Utils {
   }
 
   static String formatApiDate(String apiDate) {
-    final dateFormat = DateFormat("yyyy-MM-dd").format(DateTime.parse(apiDate));
+    final dateFormat = DateFormat("yyyy-MM-dd","en").format(DateTime.parse(apiDate));
     return dateFormat;
   }
 

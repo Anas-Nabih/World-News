@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:intl/locale.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/common_utils/image_loader.dart';
@@ -167,7 +168,7 @@ class _NewsItemState extends State<NewsItem> {
           ),
           Positioned(
             top: 0.h,
-            right: 1.w,
+            right: appProvider.appLocale == "ar" ? 85.w : 1.w,
             child: GestureDetector(
               onTap: () {
                 if(widget.article.isBookMarked!) {

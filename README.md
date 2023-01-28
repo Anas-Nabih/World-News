@@ -1,9 +1,14 @@
-# World News 
+# World News 🛰️🌍
 
 - **cross platform app built with (MVP) Architectural Pattern, Clean code & Clean Architecture and have NetWork Manager, Prefs manager and Utils manager.**
 - The project is an application that **displays news articles and events** that occur all over the world immediately, The user can share news articles and video clips.
 - The application will enable the user to view news, photo and video details, and users can also **bookmark** any news article/video for future use.
 - The application is characterized by **a simple creative design and contains a light and dark mode** to suit the comfort of the user.
+
+## API key 🔑
+You'll need to provide API key to fetch the news from the News Service (API). Currently the news is fetched from [NewsAPI](https://newsapi.org/)
+
+- Generate an API key (It's only 2 steps!) from [NewsAPI](https://newsapi.org/)
 
 ## Packages i use
 

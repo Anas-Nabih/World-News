@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Country": MessageLookupByLibrary.simpleMessage("البلد"),
         "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "bookmarks": MessageLookupByLibrary.simpleMessage("BookMarks"),
         "business": MessageLookupByLibrary.simpleMessage("تجارة"),
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغير اللغة"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الليلي"),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:world_news/models/article_model.dart';
  import 'package:world_news/widgets/news_item.dart';
+ import 'package:sizer/sizer.dart';
 
 class NewsList extends StatelessWidget {
 
@@ -13,6 +14,7 @@ class NewsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: ListView.builder(
+          padding: EdgeInsets.symmetric(horizontal: 1.w),
       itemCount: articles.length ,
       itemBuilder: (context, index) => NewsItem(article: articles[index],onBookMarkedTapped: (){
 

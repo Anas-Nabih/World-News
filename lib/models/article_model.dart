@@ -1,5 +1,5 @@
 class Article {
-  Source? source;
+  NewsSourceModel? source;
   String? author;
   String? title;
   String? description;
@@ -7,6 +7,7 @@ class Article {
   String? imageUrl;
   String? publishedAt;
   String? content;
+  bool? isBookMarked;
 
   Article(
       {this.source,
@@ -16,11 +17,12 @@ class Article {
         this.sourceUrl,
         this.imageUrl,
         this.publishedAt,
-        this.content});
+        this.content,
+        this.isBookMarked = false});
 
   Article.fromJson(Map<String, dynamic> json) {
     source =
-    json['source'] != null ? new Source.fromJson(json['source']) : null;
+    json['source'] != null ? new NewsSourceModel.fromJson(json['source']) : null;
     author = json['author'];
     title = json['title'];
     description = json['description'];
@@ -46,13 +48,13 @@ class Article {
   }
 }
 
-class Source {
+class NewsSourceModel {
   String? id;
   String? name;
 
-  Source({this.id, this.name});
+  NewsSourceModel({this.id, this.name});
 
-  Source.fromJson(Map<String, dynamic> json) {
+  NewsSourceModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
   }

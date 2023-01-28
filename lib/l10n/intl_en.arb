@@ -18,5 +18,6 @@
   "entertainment":"Entertainment",
   "Description":"Description",
   "Content":"Content",
-  "noDataFoundAboutThisSearch": "No Data Found about this search"
+  "noDataFoundAboutThisSearch": "No Data Found about this search",
+  "bookmarks": "BookMarks"
 }

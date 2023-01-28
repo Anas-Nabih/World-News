@@ -249,6 +249,16 @@ class S {
       args: [],
     );
   }
+
+  /// `BookMarks`
+  String get bookmarks {
+    return Intl.message(
+      'BookMarks',
+      name: 'bookmarks',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

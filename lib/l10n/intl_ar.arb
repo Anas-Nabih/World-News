@@ -18,5 +18,6 @@
   "entertainment":"ترفيه",
   "Description":"الوصف",
   "Content":"المحتوى",
-  "noDataFoundAboutThisSearch": "لا توجد بيانات حول هذا البحث"
+  "noDataFoundAboutThisSearch": "لا توجد بيانات حول هذا البحث",
+  "bookmarks": "BookMarks"
 }

@@ -56,7 +56,7 @@ class _NewsItemState extends State<NewsItem> {
         children: [
           Container(
             height: 25.h,
-            margin: EdgeInsets.only(bottom: 2.h, right: 2.w),
+            margin: EdgeInsets.only(bottom: 2.h, /*right: 2.w*/),
             decoration: BoxDecoration(
                 color: appProvider.darkTheme
                     ? MColors.kDarkContainerBG

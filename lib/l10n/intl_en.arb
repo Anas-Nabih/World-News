@@ -19,5 +19,11 @@
   "Description":"Description",
   "Content":"Content",
   "noDataFoundAboutThisSearch": "No Data Found about this search",
-  "bookmarks": "BookMarks"
+  "bookmarks": "BookMarks",
+  "articleAddedToYourBookmarks": "Article added to your bookmarks.",
+  "youMustRemoveArticleFromBookmarks": "You must remove article from bookmarks.",
+  "noBookmarksYet": "No BookMarks Yet.",
+  "selectYourCountry": "Select Your Country",
+  "save": "Save",
+   "continued": "Continued"
 }

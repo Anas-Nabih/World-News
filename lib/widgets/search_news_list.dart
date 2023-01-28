@@ -3,7 +3,7 @@ import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/models/articles_model.dart';
 import 'package:world_news/ui/search/search_provider.dart';
 import 'package:world_news/widgets/news_item.dart';
-import 'package:world_news/widgets/search_place_holder.dart';
+import 'package:world_news/widgets/custom_place_holder.dart';
 import 'package:world_news/widgets/total_result.dart';
 import 'package:sizer/sizer.dart';
 

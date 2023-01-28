@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:world_news/common_utils/preferences/Prefs.dart';
 import 'package:world_news/common_utils/utils.dart';
+import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/ui/main_screen/main_screen.dart';
 import 'package:world_news/ui/select_country/countries_provider.dart';
@@ -26,7 +27,7 @@ class _CountriesScreenAppBarState extends State<CountriesScreenAppBar> {
         Visibility(
           visible: widget.countriesProvider.countryIndex == -1,
           child: Text(
-            "Select Your Country",
+            S.of(context).selectYourCountry,
             style: TextStyle(
                 fontSize: 14.sp,
                 color: MColors.kPrimaryColor,
@@ -39,7 +40,7 @@ class _CountriesScreenAppBarState extends State<CountriesScreenAppBar> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Select Your Country",
+                S.of(context).selectYourCountry,
                 style: TextStyle(
                     fontSize: 14.sp,
                     color: MColors.kPrimaryColor,
@@ -55,7 +56,7 @@ class _CountriesScreenAppBarState extends State<CountriesScreenAppBar> {
                             replace: true);
                       },
                       child: Text(
-                        "Save",
+                        S.of(context).save,
                         style: TextStyle(
                             fontSize: 12.sp,
                             color: MColors.kPrimaryColor,
@@ -71,7 +72,7 @@ class _CountriesScreenAppBarState extends State<CountriesScreenAppBar> {
                             replace: true);
                       },
                       child: Text(
-                        "Continue",
+                        S.of(context).continued,
                         style: TextStyle(
                             fontSize: 12.sp,
                             color: MColors.kPrimaryColor,

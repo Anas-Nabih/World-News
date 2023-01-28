@@ -26,9 +26,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "Country": MessageLookupByLibrary.simpleMessage("البلد"),
         "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
-        "bookmarks": MessageLookupByLibrary.simpleMessage("BookMarks"),
+        "articleAddedToYourBookmarks": MessageLookupByLibrary.simpleMessage(
+            "تمت اضافة الخبر الى إشاراتك المرجعية."),
+        "bookmarks": MessageLookupByLibrary.simpleMessage("الإشارات المرجعية"),
         "business": MessageLookupByLibrary.simpleMessage("تجارة"),
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغير اللغة"),
+        "continued": MessageLookupByLibrary.simpleMessage("تابع"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع الليلي"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "entertainment": MessageLookupByLibrary.simpleMessage("ترفيه"),
@@ -37,13 +40,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "lookForWhatYouAreThinking":
             MessageLookupByLibrary.simpleMessage("ابحث عما تفكر فيه."),
         "news": MessageLookupByLibrary.simpleMessage("الأخبار"),
+        "noBookmarksYet":
+            MessageLookupByLibrary.simpleMessage("لا يوجد لديك إشارات مرجعية."),
         "noDataFoundAboutThisSearch": MessageLookupByLibrary.simpleMessage(
             "لا توجد بيانات حول هذا البحث"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "science": MessageLookupByLibrary.simpleMessage("علوم"),
         "search": MessageLookupByLibrary.simpleMessage("بحث"),
         "seeAll": MessageLookupByLibrary.simpleMessage("الكل"),
         "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة"),
+        "selectYourCountry":
+            MessageLookupByLibrary.simpleMessage("اختر الدولة"),
         "sports": MessageLookupByLibrary.simpleMessage("رياضة"),
-        "technology": MessageLookupByLibrary.simpleMessage("تكنولوجيا")
+        "technology": MessageLookupByLibrary.simpleMessage("تكنولوجيا"),
+        "youMustRemoveArticleFromBookmarks":
+            MessageLookupByLibrary.simpleMessage(
+                "يجب عليك إزالة الخبر من الإشارات المرجعية.")
       };
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 
 class Utils {
@@ -28,6 +29,11 @@ class Utils {
   static String formatApiDate(String apiDate) {
     final dateFormat = DateFormat("yyyy-MM-dd").format(DateTime.parse(apiDate));
     return dateFormat;
+  }
+
+  static showToast({required String msg}){
+   return Fluttertoast.showToast(msg: msg,
+      backgroundColor: const Color(0xffff827d),);
   }
 
 

@@ -7,7 +7,7 @@ import 'package:world_news/models/articles_model.dart';
 import 'package:world_news/ui/search/search_presenter.dart';
 import 'package:world_news/ui/search/search_provider.dart';
 import 'package:world_news/widgets/search_news_list.dart';
-import 'package:world_news/widgets/search_place_holder.dart';
+import 'package:world_news/widgets/custom_place_holder.dart';
 import 'package:world_news/widgets/search_screen_app_bar.dart';
 import 'package:world_news/widgets/total_result.dart';
 

@@ -11,4 +11,13 @@ class BookMarksProvider <T> extends BaseListProvider<T>{
     _dataLoaded = value;
     notifyListeners();
   }
+
+  List<String> _docsId = [];
+
+  List<String> get docsId => _docsId;
+
+  set docsId(List<String> value) {
+    _docsId = value;
+    notifyListeners();
+  }
 }

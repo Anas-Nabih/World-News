@@ -19,12 +19,12 @@ class AppProvider extends BaseProvider {
 
   set darkTheme(bool value) {
     _darkTheme = value;
-    debugPrint("theme statues: $value");
     notifyListeners();
   }
 
   List<String> categoriesList({required BuildContext context}){
     return  [
+
       S.of(context).general,
       S.of(context).technology,
       S.of(context).business,

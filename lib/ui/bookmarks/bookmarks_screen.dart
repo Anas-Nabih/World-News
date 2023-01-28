@@ -11,7 +11,7 @@ import 'package:world_news/widgets/bookmarks_list.dart';
 import 'package:world_news/widgets/news_shimmer.dart';
 import 'package:world_news/widgets/screen_app_bar.dart';
 import 'package:sizer/sizer.dart';
-import 'package:world_news/widgets/search_place_holder.dart';
+import 'package:world_news/widgets/custom_place_holder.dart';
 
 class BookMarksScreen extends StatefulWidget {
   const BookMarksScreen({Key? key}) : super(key: key);
@@ -53,13 +53,13 @@ class BookMarksScreenState
                   ),
                   bookMarksProvider.dataLoaded
                       ? bookMarksProvider.list.isNotEmpty
-                          ? BookMarksList(bookMarksProvider: bookMarksProvider)
+                          ? BookMarksList(bookMarksProvider: bookMarksProvider,presenter: mPresenter,)
                           : Expanded(
                               child: Column(
                                 children: [
                                   SizedBox(height: 10.h),
-                                  const CustomPlaceHolder(
-                                      text: "No BookMarks Yet."),
+                                  CustomPlaceHolder(
+                                      text: S.of(context).noBookmarksYet),
                                 ],
                               ),
                             )

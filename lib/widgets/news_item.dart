@@ -1,11 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/common_utils/image_loader.dart';
 import 'package:world_news/common_utils/preferences/const.dart';
 import 'package:world_news/common_utils/utils.dart';
+import 'package:world_news/generated/l10n.dart';
 import 'package:world_news/models/article_model.dart';
 import 'package:world_news/res/colors.dart';
 import 'package:world_news/res/theme/app_provider.dart';
@@ -16,11 +18,15 @@ class NewsItem extends StatefulWidget {
   const NewsItem({
     required this.article,
      this.onBookMarkedTapped,
+    this.isFromBookmarksScreen = false,
+    this.docId = "",
     Key? key,
   }) : super(key: key);
 
   final Article article;
   final void Function()? onBookMarkedTapped;
+  final bool isFromBookmarksScreen ;
+  final String docId;
 
   @override
   State<NewsItem> createState() => _NewsItemState();
@@ -45,9 +51,18 @@ class _NewsItemState extends State<NewsItem> {
       widget.article.isBookMarked = true;
     });
 
+    Utils.showToast(msg: S.of(context).articleAddedToYourBookmarks);
+  }
 
-    removeFromBookMark(docId){
-      bookMarks.doc("").delete();
+  removeFromBookMark(){
+    if(widget.isFromBookmarksScreen){
+      bookMarks.doc(widget.docId).delete();
+      widget.onBookMarkedTapped!();
+      setState(() {
+        widget.article.isBookMarked = false;
+      });
+    }else{
+      Utils.showToast(msg: S.of(context).youMustRemoveArticleFromBookmarks);
     }
 
   }
@@ -154,7 +169,13 @@ class _NewsItemState extends State<NewsItem> {
             top: 0.h,
             right: 1.w,
             child: GestureDetector(
-              onTap: ()=>addToBookMarks(article: widget.article),
+              onTap: () {
+                if(widget.article.isBookMarked!) {
+                  removeFromBookMark();
+                }else{
+                  addToBookMarks(article: widget.article);
+                }
+              },
               child: SvgPicture.asset(widget.article!.isBookMarked! ?  "assets/svg/bookmark_filled.svg":"assets/svg/bookmark.svg",
                   color: MColors.kPrimaryColor),
             ),

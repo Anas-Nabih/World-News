@@ -26,10 +26,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "Country": MessageLookupByLibrary.simpleMessage("Country"),
         "Description": MessageLookupByLibrary.simpleMessage("Description"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "articleAddedToYourBookmarks": MessageLookupByLibrary.simpleMessage(
+            "Article added to your bookmarks."),
         "bookmarks": MessageLookupByLibrary.simpleMessage("BookMarks"),
         "business": MessageLookupByLibrary.simpleMessage("Business"),
         "changeLanguage":
             MessageLookupByLibrary.simpleMessage("Change Language"),
+        "continued": MessageLookupByLibrary.simpleMessage("Continued"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "entertainment": MessageLookupByLibrary.simpleMessage("Entertainment"),
@@ -38,14 +41,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "lookForWhatYouAreThinking": MessageLookupByLibrary.simpleMessage(
             "Look for what you\'re thinking."),
         "news": MessageLookupByLibrary.simpleMessage("news"),
+        "noBookmarksYet":
+            MessageLookupByLibrary.simpleMessage("No BookMarks Yet."),
         "noDataFoundAboutThisSearch": MessageLookupByLibrary.simpleMessage(
             "No Data Found about this search"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "science": MessageLookupByLibrary.simpleMessage("Science"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "seeAll": MessageLookupByLibrary.simpleMessage("See all"),
         "selectLanguage":
             MessageLookupByLibrary.simpleMessage("Select Language"),
+        "selectYourCountry":
+            MessageLookupByLibrary.simpleMessage("Select Your Country"),
         "sports": MessageLookupByLibrary.simpleMessage("Sports"),
-        "technology": MessageLookupByLibrary.simpleMessage("Technology")
+        "technology": MessageLookupByLibrary.simpleMessage("Technology"),
+        "youMustRemoveArticleFromBookmarks":
+            MessageLookupByLibrary.simpleMessage(
+                "You must remove article from bookmarks.")
       };
 }

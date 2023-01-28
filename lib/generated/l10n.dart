@@ -259,6 +259,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Article added to your bookmarks.`
+  String get articleAddedToYourBookmarks {
+    return Intl.message(
+      'Article added to your bookmarks.',
+      name: 'articleAddedToYourBookmarks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You must remove article from bookmarks.`
+  String get youMustRemoveArticleFromBookmarks {
+    return Intl.message(
+      'You must remove article from bookmarks.',
+      name: 'youMustRemoveArticleFromBookmarks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No BookMarks Yet.`
+  String get noBookmarksYet {
+    return Intl.message(
+      'No BookMarks Yet.',
+      name: 'noBookmarksYet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Your Country`
+  String get selectYourCountry {
+    return Intl.message(
+      'Select Your Country',
+      name: 'selectYourCountry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continued`
+  String get continued {
+    return Intl.message(
+      'Continued',
+      name: 'continued',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -15,6 +15,7 @@ class CategoriesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Expanded(
       child: GridView.builder(
           padding: EdgeInsets.only(

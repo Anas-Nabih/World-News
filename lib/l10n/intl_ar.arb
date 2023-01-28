@@ -19,5 +19,11 @@
   "Description":"الوصف",
   "Content":"المحتوى",
   "noDataFoundAboutThisSearch": "لا توجد بيانات حول هذا البحث",
-  "bookmarks": "BookMarks"
+  "bookmarks": "الإشارات المرجعية",
+  "articleAddedToYourBookmarks": "تمت اضافة الخبر الى إشاراتك المرجعية.",
+  "youMustRemoveArticleFromBookmarks": "يجب عليك إزالة الخبر من الإشارات المرجعية.",
+  "noBookmarksYet": "لا يوجد لديك إشارات مرجعية.",
+  "selectYourCountry": "اختر الدولة",
+  "save": "حفظ",
+   "continued": "تابع"
 }

@@ -16,7 +16,7 @@ class NewsShimmer extends StatelessWidget {
             shrinkWrap: true,
             itemCount: 10,
             itemBuilder: (context, index) => Container(
-                margin: EdgeInsets.only(bottom: 2.h, right: 2.w),
+                margin: EdgeInsets.only(bottom: 2.h,/* right: 2.w*/),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),

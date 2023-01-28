@@ -44,7 +44,7 @@ class SearchScreenState extends BaseState<SearchScreen, SearchPresenter>
                           SizedBox(height: 2.h),
                           searchProvider.list.isNotEmpty
                               ? SearchNewsList(searchProvider: searchProvider)
-                              : SearchPlaceHolder(
+                              : CustomPlaceHolder(
                                   text: S.of(context).lookForWhatYouAreThinking,
                                 )
                         ],

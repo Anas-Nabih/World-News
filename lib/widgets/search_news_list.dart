@@ -26,7 +26,7 @@ class SearchNewsList extends StatelessWidget {
            },
          ),
             )
-        : SearchPlaceHolder(
+        : CustomPlaceHolder(
             text: S.of(context).noDataFoundAboutThisSearch,
           );
   }

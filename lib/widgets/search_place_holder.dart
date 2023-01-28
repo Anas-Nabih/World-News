@@ -3,8 +3,8 @@ import 'package:lottie/lottie.dart';
 import 'package:sizer/sizer.dart';
 import 'package:world_news/res/colors.dart';
 
-class SearchPlaceHolder extends StatelessWidget {
-  const SearchPlaceHolder({Key? key, required this.text}) : super(key: key);
+class CustomPlaceHolder extends StatelessWidget {
+  const CustomPlaceHolder({Key? key, required this.text}) : super(key: key);
 
   final String text;
 

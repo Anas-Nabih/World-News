@@ -18,7 +18,8 @@ class Article {
         this.imageUrl,
         this.publishedAt,
         this.content,
-        this.isBookMarked = false});
+        this.isBookMarked = false
+        });
 
   Article.fromJson(Map<String, dynamic> json) {
     source =
@@ -30,6 +31,7 @@ class Article {
     imageUrl = json['urlToImage'];
     publishedAt = json['publishedAt'];
     content = json['content'];
+    isBookMarked = false;
   }
 
   Map<String, dynamic> toJson() {

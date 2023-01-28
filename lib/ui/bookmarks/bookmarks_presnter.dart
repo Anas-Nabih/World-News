@@ -15,5 +15,6 @@ class BookMarksPresenter extends BasePresenter<BookMarksScreenState> {
     for (var doc in querySnapshot.docs) {
       view.bookMarksProvider.list.add(BookMarkModel.fromJson(doc));
     }
+    view.bookMarksProvider.dataLoaded = true;
   }
 }

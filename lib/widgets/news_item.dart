@@ -35,12 +35,21 @@ class _NewsItemState extends State<NewsItem> {
       "newsId":"",
       "title": article.title,
       "sourceUrl": article.sourceUrl,
-      "imageUrl": article.sourceUrl,
+      "imageUrl": article.imageUrl,
       "author": article.author,
       "content": article.content,
       "description": article.description,
       "publishedAt": Utils.formatApiDate(article.publishedAt!),
       "source": article.source!.name});
+    setState(() {
+      widget.article.isBookMarked = true;
+    });
+
+
+    removeFromBookMark(docId){
+      bookMarks.doc("").delete();
+    }
+
   }
 
   @override
@@ -143,10 +152,10 @@ class _NewsItemState extends State<NewsItem> {
           ),
           Positioned(
             top: 0.h,
-            right: 3.w,
+            right: 1.w,
             child: GestureDetector(
               onTap: ()=>addToBookMarks(article: widget.article),
-              child: SvgPicture.asset("assets/svg/bookmark_filled.svg",
+              child: SvgPicture.asset(widget.article!.isBookMarked! ?  "assets/svg/bookmark_filled.svg":"assets/svg/bookmark.svg",
                   color: MColors.kPrimaryColor),
             ),
           )
